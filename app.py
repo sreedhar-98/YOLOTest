@@ -8,7 +8,7 @@ from ultralytics import YOLO
 
 @st.cache_resource()
 def get_detector():
-    return YOLO("yolov8n.torchscript",task="detect",verbose=False)
+    return YOLO("yolov8n_openvino_model/",task="detect",verbose=False)
 
 
 

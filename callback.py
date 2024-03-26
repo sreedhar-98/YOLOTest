@@ -23,6 +23,6 @@ def callback(frame,model):
     fps = 1.0 / (end_time - start_time)
     fps_cum += fps
     fps_avg = fps_cum / n_frames
-    cv2.putText(frame,f"Live Person Count : {lpc}",(10,50),cv2.FONT_HERSHEY_COMPLEX_SMALL,color=(0,255,0),fontScale=1)
-    cv2.putText(frame,'FPS: {}'.format(math.ceil(fps_avg)),(10,90),cv2.FONT_HERSHEY_COMPLEX_SMALL,color=(0,255,0),fontScale=1)
+    cv2.putText(frame,f"Live Person Count : {lpc}",(10,50),cv2.FONT_HERSHEY_COMPLEX_SMALL,color=(0,0,0),fontScale=1)
+    cv2.putText(frame,'FPS: {}'.format(math.ceil(fps_avg)),(10,90),cv2.FONT_HERSHEY_COMPLEX_SMALL,color=(0,0,0),fontScale=1)
     return av.VideoFrame.from_ndarray(frame,format="bgr24")
