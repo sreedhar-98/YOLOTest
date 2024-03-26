@@ -1,0 +1,6 @@
+openvino
+opencv-python
+streamlit
+streamlit_webrtc
+twilio
+ultralytics
