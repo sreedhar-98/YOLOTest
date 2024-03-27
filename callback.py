@@ -13,7 +13,7 @@ def callback(frame,model):
     start_time = time.perf_counter()
     n_frames+=1
     frame=frame.to_ndarray(format="bgr24")
-    res=model.predict(frame,device="cpu",classes=[0],conf=0.70,verbose=False,iou=0.7)
+    res=model.predict(frame,device="cpu",classes=[0],conf=0.70,verbose=False,iou=0.7,imgsz=(240,320))
     boxes=res[0].boxes
     lpc=0
     for xyxy in boxes.xyxy:
